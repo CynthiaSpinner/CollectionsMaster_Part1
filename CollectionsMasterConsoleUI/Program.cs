@@ -85,6 +85,10 @@ namespace CollectionsMasterConsoleUI
             // Implement the PopulateArray() method at bottom of file
             PopulateArray(numbers);
             
+            // TODO 2b: Call NumberPrinter(numbers) to see the populated array
+            NumberPrinter(numbers);
+            
+            
             Console.WriteLine("\n3. ARRAY ACCESS:");
             // TODO 3: Call AccessArrayElements(numbers) method
             // Implement the AccessArrayElements() method at bottom of file
@@ -362,7 +366,7 @@ namespace CollectionsMasterConsoleUI
 
             Console.WriteLine("🎉 COLLECTIONS MASTER COMPLETE! 🎉");
             Console.ReadKey();
-            #endregion
+           
         }
 
         // ============ ARRAY METHODS ============
@@ -370,11 +374,15 @@ namespace CollectionsMasterConsoleUI
         private static int[] CreateArray()
         {
             // STEP 1: Create an integer array of size 10
+            // STEP 2: Console.WriteLine() to print a message that the array was created           
             // STEP 2: Return the array
             // Example: int[] myArray = new int[10];
+            // Example: Console.WriteLine("Array Created!");
             // Example: return myArray;
+            
             int[] myArray = new int[10];
-            return myArray;; // Replace this line
+            Console.WriteLine("Array Created!");
+            return myArray; // Replace this line
         }
 
         private static void PopulateArray(int[] numbers)
@@ -390,6 +398,7 @@ namespace CollectionsMasterConsoleUI
             {
                 numbers[i] = rng.Next(1, 101);
             }
+            
             
         }
 
@@ -531,7 +540,7 @@ namespace CollectionsMasterConsoleUI
             // Example: bool found = numberList.Contains(25);
             // Example: Console.WriteLine($"Number 25 found: {found}");
             bool found = numberList.Contains(25);
-            Console.WriteLine($"Number 25 found: {found}")
+            Console.WriteLine($"Number 25 found: {found}");
         }
 
         private static void RemoveFromList(List<int> numberList)
@@ -540,7 +549,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.Remove(15);
             // Example: NumberPrinter(numberList);
-            numberList.Remove(15)
+            numberList.Remove(15);
             NumberPrinter(numberList);                       
         }
 
