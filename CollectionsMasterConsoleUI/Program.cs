@@ -103,13 +103,13 @@ namespace CollectionsMasterConsoleUI
             // TODO 7: Call CopyArray(numbers) method
             // Implement the CopyArray() method at bottom of file
             
-            Console.WriteLine("\n8. ARRAY CLEAR:");
-            // TODO 8: Call ClearArray(numbers) method
-            // Implement the ClearArray() method at bottom of file
-            
-            Console.WriteLine("\n9. ARRAY RESIZE:");
-            // TODO 9: Call ResizeArray(numbers) method
+            Console.WriteLine("\n8. ARRAY RESIZE:");
+            // TODO 8: Call ResizeArray(numbers) method (make it bigger, add more numbers)
             // Implement the ResizeArray() method at bottom of file
+            
+            Console.WriteLine("\n9. ARRAY CLEAR:");
+            // TODO 9: Call ClearArray(numbers) method (sets all elements to 0)
+            // Implement the ClearArray() method at bottom of file
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF ARRAYS SECTION ***");
@@ -429,8 +429,11 @@ namespace CollectionsMasterConsoleUI
         private static int[] ResizeArray(int[] numbers)
         {
             // STEP 1: Use Array.Resize() to make the array larger (try size 15)
-            // STEP 2: Print the resized array
+            // STEP 2: Fill the new positions with more random numbers
+            // STEP 3: Print the resized array to see the new elements
             // Example: Array.Resize(ref numbers, 15);
+            // Example: Random rng = new Random();
+            // Example: for (int i = 10; i < numbers.Length; i++) numbers[i] = rng.Next(1, 101);
             // Example: NumberPrinter(numbers);
             
             return numbers;
