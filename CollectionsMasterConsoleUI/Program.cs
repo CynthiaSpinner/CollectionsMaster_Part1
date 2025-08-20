@@ -429,7 +429,7 @@ namespace CollectionsMasterConsoleUI
             {
                 Console.WriteLine($"Number {searchValue} not found");
             }
-            else{}
+            else
             {
                 Console.WriteLine($"Number {searchValue} found at index {index}");
             }
@@ -463,6 +463,7 @@ namespace CollectionsMasterConsoleUI
             // Example: int[] copy = new int[numbers.Length];
             // Example: Array.Copy(numbers, copy, numbers.Length);
             int[] copy = new int[numbers.Length];
+            Array.Copy(numbers, copy, numbers.Length);
             return copy; // Replace with your copied array
         }
 
