@@ -10,6 +10,7 @@ namespace CollectionsMasterConsoleUI
     /// FOCUS: ARRAYS AND LISTS
     /// 1. Array - Fixed-size indexed collection (you know this!)
     /// 2. List<T> - Dynamic resizable collection (you know this!)
+    /// 3. Dictionary<TKey,TValue> - Stores key-value pairs for fast lookups (like a phone book)
     /// 
     /// CORE ARRAY METHODS TO RESEARCH:
     /// - Array.Copy() - Copy elements between arrays
@@ -33,29 +34,18 @@ namespace CollectionsMasterConsoleUI
     /// - ToArray() - Convert to array
     /// - Count - Get number of elements
     /// - Capacity - Get allocated storage space
-    /// 
-    /// ADVANCED COLLECTIONS (Learn how to Learn section):
-    /// 
-    /// • Dictionary<TKey,TValue> - Stores key-value pairs for fast lookups (like a phone book)
-    ///   Use when: You need to quickly find values using unique keys
-    ///   Example: Student names → grades, Product IDs → prices
-    /// 
-    /// • HashSet<T> - Stores unique items only, automatically prevents duplicates
-    ///   Use when: You need a collection with no duplicate values
-    ///   Example: Unique usernames, visited website pages, lottery numbers
-    /// 
-    /// • Stack<T> - Last-In-First-Out (LIFO) like a stack of plates
-    ///   Use when: You need to process items in reverse order
-    ///   Example: Undo operations, browser back button, function call stack
-    /// 
-    /// • Queue<T> - First-In-First-Out (FIFO) like a line at a store
-    ///   Use when: You need to process items in the order they arrived
-    ///   Example: Print queue, customer service line, task scheduling
-    /// 
-    /// • SortedList<TKey,TValue> - Key-value pairs kept automatically sorted by key
-    ///   Use when: You need Dictionary functionality but want items sorted
-    ///   Example: Leaderboard (score → player), timeline (date → event)
-    /// 
+    ///
+    /// CORE DICTIONARY METHODS TO RESEARCH:
+    /// - Add() - Add key-value pair
+    /// - Remove() - Remove key-value pair
+    /// - ContainsKey() - Check if key exists
+    /// - ContainsValue() - Check if value exists
+    /// - TryGetValue() - Safely get value
+    /// - Clear() - Remove all pairs
+    /// - Keys - Get all keys
+    /// - Values - Get all values
+    /// - Count - Get number of pairs
+    ///
     /// WHERE TO RESEARCH:
     /// - Microsoft Docs: docs.microsoft.com/dotnet/api/system.collections.generic
     /// - C# Documentation: learn.microsoft.com/dotnet/csharp/
@@ -196,12 +186,7 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("=".PadRight(60, '=') + "\n");
             #endregion
 
-            //Learn More Section
-            //These are bonus collections to explore after mastering Arrays & Lists!
-            Console.WriteLine("\n" + "=".PadRight(60, '='));
-            Console.WriteLine("*** ADVANCED COLLECTIONS ***");
-            Console.WriteLine("=".PadRight(60, '=') + "\n");
-
+           
             #region Dictionary
             // DICTIONARY<TKey,TValue> CORE METHODS FOR REFERENCE:
             // • Add(key, value) - Add key-value pair
@@ -215,162 +200,42 @@ namespace CollectionsMasterConsoleUI
             // • Values - Get all values
             // • Count - Get number of pairs
             
-            Console.WriteLine("*** DICTIONARY ***");
+            Console.WriteLine("*** SECTION 3: DICTIONARY ***");
             Console.WriteLine("=".PadRight(60, '='));
             //Key-value pairs for fast lookups (like a phone book)
 
             Console.WriteLine("\n1. DICTIONARY CREATE:");
             // TODO 13: Call CreateDictionary() method and store result in a variable
             // Implement the CreateDictionary() method at bottom of file
+            Dictionary<string, int> grades = CreateDictionary();
             
             Console.WriteLine("\n2. DICTIONARY ADD:");
             // TODO 14: Call AddToDictionary(grades) method
             // Implement the AddToDictionary() method at bottom of file
+            AddToDictionary(grades);
             
             Console.WriteLine("\n3. DICTIONARY LOOKUP:");
             // TODO 15: Call LookupInDictionary(grades) method
             // Implement the LookupInDictionary() method at bottom of file
+            LookupInDictionary(grades);
             
             Console.WriteLine("\n4. DICTIONARY CONTAINSKEY:");
             // TODO 16: Call CheckDictionaryContainsKey(grades) method
             // Implement the CheckDictionaryContainsKey() method at bottom of file
+            CheckDictionaryContainsKey(grades);
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF DICTIONARY SECTION ***");
             Console.WriteLine("=".PadRight(60, '=') + "\n");
             #endregion
-
-            #region HashSet
-            // HASHSET<T> CORE METHODS FOR REFERENCE:
-            // • Add(item) - Add unique item
-            // • Contains(item) - Check if item exists
-            // • Remove(item) - Remove specific item
-            // • UnionWith(other) - Add items from another collection
-            // • IntersectWith(other) - Keep only common items
-            // • ExceptWith(other) - Remove items that exist in other
-            // • Clear() - Remove all items
-            // • Count - Get number of unique items
-            
-            Console.WriteLine("*** HASHSET ***");
-            Console.WriteLine("=".PadRight(60, '='));
-            //Stores unique items only, automatically prevents duplicates
-
-            Console.WriteLine("\n1. HASHSET CREATE:");
-            // TODO 17: Call CreateHashSet() method and store result in a variable
-            // Implement the CreateHashSet() method at bottom of file
-            
-            Console.WriteLine("\n2. HASHSET ADD:");
-            // TODO 18: Call AddToHashSet(uniqueNames) method
-            // Implement the AddToHashSet() method at bottom of file
-            
-            Console.WriteLine("\n3. HASHSET COUNT & CONTAINS:");
-            // TODO 19: Call CheckHashSetCount(uniqueNames) method
-            // Implement the CheckHashSetCount() method at bottom of file
-
-            Console.WriteLine("\n" + "=".PadRight(60, '='));
-            Console.WriteLine("*** END OF HASHSET SECTION ***");
-            Console.WriteLine("=".PadRight(60, '=') + "\n");
-            #endregion
-
-            #region Stack
-            // STACK<T> CORE METHODS FOR REFERENCE:
-            // • Push(item) - Add item to top
-            // • Pop() - Remove and return top item
-            // • Peek() - Look at top item without removing
-            // • Contains(item) - Check if item exists
-            // • Clear() - Remove all items
-            // • Count - Get number of items
-            
-            Console.WriteLine("*** STACK ***");
-            Console.WriteLine("=".PadRight(60, '='));
-            //Last-In-First-Out (LIFO) like a stack of plates
-
-            Console.WriteLine("\n1. STACK CREATE:");
-            // TODO 20: Call CreateStack() method and store result in a variable
-            // Implement the CreateStack() method at bottom of file
-            
-            Console.WriteLine("\n2. STACK PUSH:");
-            // TODO 21: Call PushToStack(stack) method
-            // Implement the PushToStack() method at bottom of file
-            
-            Console.WriteLine("\n3. STACK POP:");
-            // TODO 22: Call PopFromStack(stack) method
-            // Implement the PopFromStack() method at bottom of file
-
-            Console.WriteLine("\n" + "=".PadRight(60, '='));
-            Console.WriteLine("*** END OF STACK SECTION ***");
-            Console.WriteLine("=".PadRight(60, '=') + "\n");
-            #endregion
-
-            #region Queue
-            // QUEUE<T> CORE METHODS FOR REFERENCE:
-            // • Enqueue(item) - Add item to back
-            // • Dequeue() - Remove and return front item
-            // • Peek() - Look at front item without removing
-            // • Contains(item) - Check if item exists
-            // • Clear() - Remove all items
-            // • Count - Get number of items
-            
-            Console.WriteLine("*** QUEUE ***");
-            Console.WriteLine("=".PadRight(60, '='));
-            //First-In-First-Out (FIFO) like a line at a store
-
-            Console.WriteLine("\n1. QUEUE CREATE:");
-            // TODO 23: Call CreateQueue() method and store result in a variable
-            // Implement the CreateQueue() method at bottom of file
-            
-            Console.WriteLine("\n2. QUEUE ENQUEUE:");
-            // TODO 24: Call EnqueueToQueue(queue) method
-            // Implement the EnqueueToQueue() method at bottom of file
-            
-            Console.WriteLine("\n3. QUEUE DEQUEUE:");
-            // TODO 25: Call DequeueFromQueue(queue) method
-            // Implement the DequeueFromQueue() method at bottom of file
-
-            Console.WriteLine("\n" + "=".PadRight(60, '='));
-            Console.WriteLine("*** END OF QUEUE SECTION ***");
-            Console.WriteLine("=".PadRight(60, '=') + "\n");
-            #endregion
-
-            #region SortedList
-            // SORTEDLIST<TKey,TValue> CORE METHODS FOR REFERENCE:
-            // • Add(key, value) - Add key-value pair (auto-sorted)
-            // • [key] = value - Set or get value by key
-            // • ContainsKey(key) - Check if key exists
-            // • ContainsValue(value) - Check if value exists
-            // • Remove(key) - Remove key-value pair
-            // • IndexOfKey(key) - Get position of key
-            // • IndexOfValue(value) - Get position of value
-            // • RemoveAt(index) - Remove by position
-            // • Keys - Get all keys (sorted)
-            // • Values - Get all values (by key order)
-            // • Count - Get number of pairs
-            
-            Console.WriteLine("*** SORTEDLIST ***");
-            Console.WriteLine("=".PadRight(60, '='));
-            //Key-value pairs kept automatically sorted by key
-
-            Console.WriteLine("\n1. SORTEDLIST CREATE:");
-            // TODO 26: Call CreateSortedList() method and store result in a variable
-            // Implement the CreateSortedList() method at bottom of file
-            
-            Console.WriteLine("\n2. SORTEDLIST ADD:");
-            // TODO 27: Call AddToSortedList(sorted) method
-            // Implement the AddToSortedList() method at bottom of file
-            
-            Console.WriteLine("\n3. SORTEDLIST DISPLAY:");
-            // TODO 28: Call DisplaySortedList(sorted) method
-            // Implement the DisplaySortedList() method at bottom of file
-
-            Console.WriteLine("\n" + "=".PadRight(60, '='));
-            Console.WriteLine("*** END OF SORTEDLIST SECTION ***");
-            Console.WriteLine("=".PadRight(60, '=') + "\n");
-            #endregion
-
+      
             Console.WriteLine("🎉 COLLECTIONS MASTER COMPLETE! 🎉");
+            Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
-           
         }
+        
+
+
 
         // ============ ARRAY METHODS ============
         
@@ -641,11 +506,18 @@ namespace CollectionsMasterConsoleUI
             // Example: grades.Add("Alice", 95);
             
             grades["Charlie"] = 92; // Alternative syntax (this one is done for you)
-            
-            // TODO: Print all key-value pairs using a foreach loop
-            // Example: foreach (var student in grades)
+            grades.Add("Alice", 95);
+            grades.Add("Bob", 87);
             
             Console.WriteLine("Student Grades:");
+            // TODO: Print all key-value pairs using a foreach loop
+            // Example: foreach (var student in grades)
+            foreach (var student in grades)
+            {
+                Console.WriteLine($"{student.Key}: {student.Value}");
+            }
+            
+            
         }
 
         private static void LookupInDictionary(Dictionary<string, int> grades)
@@ -653,10 +525,10 @@ namespace CollectionsMasterConsoleUI
             string studentName = "Alice";
             // TODO: Get Alice's grade from the dictionary
             // Example: int grade = grades[studentName];
-            
+            int grade = grades[studentName];
             // TODO: Print the result
             // Example: Console.WriteLine($"{studentName}'s grade: {grade}");
-            
+            Console.WriteLine($"{studentName}'s grade: {grade}");
         }
 
         private static void CheckDictionaryContainsKey(Dictionary<string, int> grades)
@@ -665,128 +537,17 @@ namespace CollectionsMasterConsoleUI
             
             // TODO: Check if the key exists using ContainsKey, then print appropriate message
             // Example: if (grades.ContainsKey(studentName))
+            if (grades.ContainsKey(studentName))
+            {
+                Console.WriteLine($"{studentName} is in the dictionary");                
+            } 
+            else {
+                Console.WriteLine($"{studentName} is not in the dictionary");
+            }
             
         }
 
-        // ============ HASHSET METHODS ============
 
-        private static HashSet<string> CreateHashSet()
-        {
-            // TODO: Create a HashSet of strings (automatically prevents duplicates)
-            // Example: HashSet<string> uniqueNames = new HashSet<string>();
-            // Then return uniqueNames;
-            
-            return null;
-        }
-
-        private static void AddToHashSet(HashSet<string> uniqueNames)
-        {
-            // TODO: Add "John", "Jane", and "John" again (watch the duplicate get ignored!)
-            // Example: uniqueNames.Add("John");
-            
-            // TODO: Print all unique names using a foreach loop
-            // Example: foreach (string name in uniqueNames)
-            
-            Console.WriteLine("Unique names in HashSet:");
-        }
-
-        private static void CheckHashSetCount(HashSet<string> uniqueNames)
-        {
-            // TODO: Print the count of unique names
-            // Example: Console.WriteLine($"Total unique names: {uniqueNames.Count}");
-            
-            // TODO: Check if specific names exist using Contains
-            // Example: Console.WriteLine($"Contains John: {uniqueNames.Contains(\"John\")}");
-            
-        }
-
-        // ============ STACK METHODS ============
-
-        private static Stack<int> CreateStack()
-        {
-            // TODO: Create a Stack of integers (Last In, First Out - like a stack of plates)
-            // Example: Stack<int> stack = new Stack<int>();
-            // Then return stack;
-            
-            return null;
-        }
-
-        private static void PushToStack(Stack<int> stack)
-        {
-            // TODO: Push the numbers 10, 20, 30 onto the stack
-            // Example: stack.Push(10);
-            
-            Console.WriteLine("Pushed 10, 20, 30 onto stack");
-            Console.WriteLine($"Stack count: {stack.Count}");
-        }
-
-        private static void PopFromStack(Stack<int> stack)
-        {
-            Console.WriteLine("Popping from stack (LIFO order):");
-            
-            // TODO: Pop all items while the stack has items (they come out in reverse order!)
-            // Example: while (stack.Count > 0)
-            // Example: int item = stack.Pop();
-            
-        }
-
-        // ============ QUEUE METHODS ============
-
-        private static Queue<string> CreateQueue()
-        {
-            // TODO: Create a Queue of strings (First In, First Out - like a line at a store)
-            // Example: Queue<string> queue = new Queue<string>();
-            // Then return queue;
-            
-            return null;
-        }
-
-        private static void EnqueueToQueue(Queue<string> queue)
-        {
-            // TODO: Add "First", "Second", "Third" to the queue
-            // Example: queue.Enqueue("First");
-            
-            Console.WriteLine("Enqueued: First, Second, Third");
-            Console.WriteLine($"Queue count: {queue.Count}");
-        }
-
-        private static void DequeueFromQueue(Queue<string> queue)
-        {
-            Console.WriteLine("Dequeuing from queue (FIFO order):");
-            
-            // TODO: Remove all items while the queue has items (they come out in same order!)
-            // Example: while (queue.Count > 0)
-            // Example: string item = queue.Dequeue();
-            
-        }
-
-        // ============ SORTEDLIST METHODS ============
-
-        private static SortedList<int, string> CreateSortedList()
-        {
-            // TODO: Create a SortedList with int keys and string values (automatically sorted by key)
-            // Example: SortedList<int, string> sorted = new SortedList<int, string>();
-            // Then return sorted;
-            
-            return null;
-        }
-
-        private static void AddToSortedList(SortedList<int, string> sorted)
-        {
-            // TODO: Add key-value pairs out of order - watch them get sorted automatically!
-            // Example: sorted.Add(3, "Third");
-            
-            Console.WriteLine("Added items out of order: 3=Third, 1=First, 2=Second");
-        }
-
-        private static void DisplaySortedList(SortedList<int, string> sorted)
-        {
-            Console.WriteLine("SortedList contents (automatically sorted by key):");
-            
-            // TODO: Loop through and print each key-value pair
-            // Example: foreach (var item in sorted)
-            
-        }
 
         /// <summary>
         /// Generic print method will iterate over any collection that implements IEnumerable<T>
