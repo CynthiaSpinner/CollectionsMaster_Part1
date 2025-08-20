@@ -78,38 +78,47 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("\n1. ARRAY CREATE:");
             // TODO 1: Call CreateArray() method and store result in a variable
             // Implement the CreateArray() method at bottom of file
+            int[] numbers = CreateArray();
             
             Console.WriteLine("\n2. ARRAY POPULATE:");
             // TODO 2: Call PopulateArray(numbers) method
             // Implement the PopulateArray() method at bottom of file
+            PopulateArray(numbers);
             
             Console.WriteLine("\n3. ARRAY ACCESS:");
             // TODO 3: Call AccessArrayElements(numbers) method
             // Implement the AccessArrayElements() method at bottom of file
-            
+            AccessArrayElements(numbers);
+
             Console.WriteLine("\n4. ARRAY SEARCH:");
             // TODO 4: Call SearchArray(numbers) method
             // Implement the SearchArray() method at bottom of file
-            
+            SearchArray(numbers);
+
             Console.WriteLine("\n5. ARRAY SORT:");
             // TODO 5: Call SortArray(numbers) method
             // Implement the SortArray() method at bottom of file
+            SortArray(numbers);
             
             Console.WriteLine("\n6. ARRAY REVERSE:");
             // TODO 6: Call ReverseArray(numbers) method
             // Implement the ReverseArray() method at bottom of file
+            ReverseArray(numbers);
             
             Console.WriteLine("\n7. ARRAY COPY:");
             // TODO 7: Call CopyArray(numbers) method
             // Implement the CopyArray() method at bottom of file
+            CopyArray(numbers);
             
             Console.WriteLine("\n8. ARRAY RESIZE:");
             // TODO 8: Call ResizeArray(numbers) method (make it bigger, add more numbers)
             // Implement the ResizeArray() method at bottom of file
+            ResizeArray(numbers);
             
             Console.WriteLine("\n9. ARRAY CLEAR:");
             // TODO 9: Call ClearArray(numbers) method (sets all elements to 0)
             // Implement the ClearArray() method at bottom of file
+            ClearArray(numbers);
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF ARRAYS SECTION ***");
@@ -123,46 +132,57 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("\n1. LIST CREATE:");
             // TODO 10: Call CreateList() method and store result in a variable
             // Implement the CreateList() method at bottom of file
+            List<int> numberList = CreateList();
             
             Console.WriteLine("\n2. LIST ADD:");
             // TODO 11: Call AddToList(numberList) method
             // Implement the AddToList() method at bottom of file
+            AddToList(numberList);
             
             Console.WriteLine("\n3. LIST INSERT:");
             // TODO 12: Call InsertIntoList(numberList) method
             // Implement the InsertIntoList() method at bottom of file
+            InsertIntoList(numberList);
             
             Console.WriteLine("\n4. LIST CONTAINS:");
             // TODO 13: Call CheckListContains(numberList) method
             // Implement the CheckListContains() method at bottom of file
+            CheckListContains(numberList);
             
             Console.WriteLine("\n5. LIST INDEXOF:");
             // TODO 14: Call FindIndexInList(numberList) method
             // Implement the FindIndexInList() method at bottom of file
+            FindIndexInList(numberList);
             
             Console.WriteLine("\n6. LIST REMOVE:");
             // TODO 15: Call RemoveFromList(numberList) method
             // Implement the RemoveFromList() method at bottom of file
+            RemoveFromList(numberList);
             
             Console.WriteLine("\n7. LIST REMOVEAT:");
             // TODO 16: Call RemoveAtIndexFromList(numberList) method
             // Implement the RemoveAtIndexFromList() method at bottom of file
-            
+            RemoveAtIndexFromList(numberList);
+
             Console.WriteLine("\n8. LIST SORT:");
             // TODO 17: Call SortList(numberList) method
             // Implement the SortList() method at bottom of file
-            
+            SortList(numberList);
+
             Console.WriteLine("\n9. LIST REVERSE:");
             // TODO 18: Call ReverseList(numberList) method
             // Implement the ReverseList() method at bottom of file
-            
+            ReverseList(numberList);
+
             Console.WriteLine("\n10. LIST TOARRAY:");
             // TODO 19: Call ConvertListToArray(numberList) method
             // Implement the ConvertListToArray() method at bottom of file
-            
+            ConvertListToArray(numberList);
+
             Console.WriteLine("\n11. LIST CLEAR:");
             // TODO 20: Call ClearList(numberList) method
             // Implement the ClearList() method at bottom of file
+            ClearList(numberList);
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF LISTS SECTION ***");
@@ -353,8 +373,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Return the array
             // Example: int[] myArray = new int[10];
             // Example: return myArray;
-            
-            return null; // Replace this line
+            int[] myArray = new int[10];
+            return myArray;; // Replace this line
         }
 
         private static void PopulateArray(int[] numbers)
@@ -596,8 +616,10 @@ namespace CollectionsMasterConsoleUI
             // TODO: Create a Dictionary with string keys and int values
             // Example: Dictionary<string, int> grades = new Dictionary<string, int>();
             // Then return grades;
+            Dictionary<string, int> grades = new Dictionary<string, int>();
+
             
-            return null;
+            return grades;
         }
 
         private static void AddToDictionary(Dictionary<string, int> grades)
