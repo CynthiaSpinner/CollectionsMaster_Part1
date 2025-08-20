@@ -112,7 +112,10 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("\n7. ARRAY COPY:");
             // TODO 7: Call CopyArray(numbers) method
             // Implement the CopyArray() method at bottom of file
-            CopyArray(numbers);
+            int[] copiedArray = CopyArray(numbers);
+            
+            // TODO 7b: Call NumberPrinter(copiedArray) to see the copied array
+            NumberPrinter(copiedArray);
             
             Console.WriteLine("\n8. ARRAY RESIZE:");
             // TODO 8: Call ResizeArray(numbers) method (make it bigger, add more numbers)
