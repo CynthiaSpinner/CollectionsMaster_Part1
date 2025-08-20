@@ -68,54 +68,54 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("\n1. ARRAY CREATE:");
             // TODO 1: Call CreateArray() method and store result in a variable
             // Implement the CreateArray() method at bottom of file
-            int[] numbers = CreateArray();
+            
             
             Console.WriteLine("\n2. ARRAY POPULATE:");
             // TODO 2: Call PopulateArray(numbers) method
             // Implement the PopulateArray() method at bottom of file
-            PopulateArray(numbers);
+         
             
             // TODO 2b: Call NumberPrinter(numbers) to see the populated array
-            NumberPrinter(numbers);
+           
             
             
             Console.WriteLine("\n3. ARRAY ACCESS:");
             // TODO 3: Call AccessArrayElements(numbers) method
             // Implement the AccessArrayElements() method at bottom of file
-            AccessArrayElements(numbers);
+            
 
             Console.WriteLine("\n4. ARRAY SEARCH:");
             // TODO 4: Call SearchArray(numbers) method
             // Implement the SearchArray() method at bottom of file
-            SearchArray(numbers);
+           
 
             Console.WriteLine("\n5. ARRAY SORT:");
             // TODO 5: Call SortArray(numbers) method
             // Implement the SortArray() method at bottom of file
-            SortArray(numbers);
+           
             
             Console.WriteLine("\n6. ARRAY REVERSE:");
             // TODO 6: Call ReverseArray(numbers) method
             // Implement the ReverseArray() method at bottom of file
-            ReverseArray(numbers);
+           
             
             Console.WriteLine("\n7. ARRAY COPY:");
             // TODO 7: Call CopyArray(numbers) method
             // Implement the CopyArray() method at bottom of file
-            int[] copiedArray = CopyArray(numbers);
+            
             
             // TODO 7b: Call NumberPrinter(copiedArray) to see the copied array
-            NumberPrinter(copiedArray);
+            
             
             Console.WriteLine("\n8. ARRAY RESIZE:");
             // TODO 8: Call ResizeArray(numbers) method (make it bigger, add more numbers)
             // Implement the ResizeArray() method at bottom of file
-            ResizeArray(numbers);
+            
             
             Console.WriteLine("\n9. ARRAY CLEAR:");
             // TODO 9: Call ClearArray(numbers) method (sets all elements to 0)
             // Implement the ClearArray() method at bottom of file
-            ClearArray(numbers);
+            
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF ARRAYS SECTION ***");
@@ -129,57 +129,57 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("\n1. LIST CREATE:");
             // TODO 10: Call CreateList() method and store result in a variable
             // Implement the CreateList() method at bottom of file
-            List<int> numberList = CreateList();
+            
             
             Console.WriteLine("\n2. LIST ADD:");
             // TODO 11: Call AddToList(numberList) method
             // Implement the AddToList() method at bottom of file
-            AddToList(numberList);
+            
             
             Console.WriteLine("\n3. LIST INSERT:");
             // TODO 12: Call InsertIntoList(numberList) method
             // Implement the InsertIntoList() method at bottom of file
-            InsertIntoList(numberList);
+            
             
             Console.WriteLine("\n4. LIST CONTAINS:");
             // TODO 13: Call CheckListContains(numberList) method
             // Implement the CheckListContains() method at bottom of file
-            CheckListContains(numberList);
+            
             
             Console.WriteLine("\n5. LIST INDEXOF:");
             // TODO 14: Call FindIndexInList(numberList) method
             // Implement the FindIndexInList() method at bottom of file
-            FindIndexInList(numberList);
+           
             
             Console.WriteLine("\n6. LIST REMOVE:");
             // TODO 15: Call RemoveFromList(numberList) method
             // Implement the RemoveFromList() method at bottom of file
-            RemoveFromList(numberList);
+            
             
             Console.WriteLine("\n7. LIST REMOVEAT:");
             // TODO 16: Call RemoveAtIndexFromList(numberList) method
             // Implement the RemoveAtIndexFromList() method at bottom of file
-            RemoveAtIndexFromList(numberList);
+           
 
             Console.WriteLine("\n8. LIST SORT:");
             // TODO 17: Call SortList(numberList) method
             // Implement the SortList() method at bottom of file
-            SortList(numberList);
+            
 
             Console.WriteLine("\n9. LIST REVERSE:");
             // TODO 18: Call ReverseList(numberList) method
             // Implement the ReverseList() method at bottom of file
-            ReverseList(numberList);
+            
 
             Console.WriteLine("\n10. LIST TOARRAY:");
             // TODO 19: Call ConvertListToArray(numberList) method
             // Implement the ConvertListToArray() method at bottom of file
-            ConvertListToArray(numberList);
+           
 
             Console.WriteLine("\n11. LIST CLEAR:");
             // TODO 20: Call ClearList(numberList) method
             // Implement the ClearList() method at bottom of file
-            ClearList(numberList);
+            
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF LISTS SECTION ***");
@@ -207,22 +207,22 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("\n1. DICTIONARY CREATE:");
             // TODO 13: Call CreateDictionary() method and store result in a variable
             // Implement the CreateDictionary() method at bottom of file
-            Dictionary<string, int> grades = CreateDictionary();
+            
             
             Console.WriteLine("\n2. DICTIONARY ADD:");
             // TODO 14: Call AddToDictionary(grades) method
             // Implement the AddToDictionary() method at bottom of file
-            AddToDictionary(grades);
+            
             
             Console.WriteLine("\n3. DICTIONARY LOOKUP:");
             // TODO 15: Call LookupInDictionary(grades) method
             // Implement the LookupInDictionary() method at bottom of file
-            LookupInDictionary(grades);
+           
             
             Console.WriteLine("\n4. DICTIONARY CONTAINSKEY:");
             // TODO 16: Call CheckDictionaryContainsKey(grades) method
             // Implement the CheckDictionaryContainsKey() method at bottom of file
-            CheckDictionaryContainsKey(grades);
+            
 
             Console.WriteLine("\n" + "=".PadRight(60, '='));
             Console.WriteLine("*** END OF DICTIONARY SECTION ***");
@@ -248,9 +248,8 @@ namespace CollectionsMasterConsoleUI
             // Example: Console.WriteLine("Array Created!");
             // Example: return myArray;
             
-            int[] myArray = new int[10];
-            Console.WriteLine("Array Created!");
-            return myArray; // Replace this line
+           
+            return null; // Replace this null with your array
         }
 
         private static void PopulateArray(int[] numbers)
@@ -262,10 +261,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 3: Inside the loop, generate a random number between 1-100
             // STEP 4: Assign the random number to numbers[i]
             // Example: numbers[i] = rng.Next(1, 101);
-            for(int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = rng.Next(1, 101);
-            }
+          
             
             
         }
@@ -276,9 +272,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the middle element using numbers[numbers.Length / 2]
             // STEP 3: Print the last element using numbers[numbers.Length - 1]
             // Example: Console.WriteLine($"First: {numbers[0]}");
-            Console.WriteLine($"First: {numbers[0]}");
-            Console.WriteLine($"Middle: {numbers[numbers.Length / 2]}");
-            Console.WriteLine($"Last: {numbers[numbers.Length - 1]}");
+           
         }
 
         private static void SearchArray(int[] numbers)
@@ -288,16 +282,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 3: Check if the result is -1 (not found) or >= 0 (found)
             // STEP 4: Print whether the number was found and at what index
             // Example: int index = Array.IndexOf(numbers, 50);
-            int searchValue = 50;
-            int index = Array.IndexOf(numbers, searchValue);
-            if(index == -1)
-            {
-                Console.WriteLine($"Number {searchValue} not found");
-            }
-            else
-            {
-                Console.WriteLine($"Number {searchValue} found at index {index}");
-            }
+          
         }
 
         private static void SortArray(int[] numbers)
@@ -306,8 +291,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the sorted array using NumberPrinter(numbers)
             // Example: Array.Sort(numbers);
             // Example: NumberPrinter(numbers);
-            Array.Sort(numbers);
-            NumberPrinter(numbers);
+           
         }
 
         private static void ReverseArray(int[] numbers)
@@ -316,8 +300,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the reversed array using NumberPrinter(numbers)
             // Example: Array.Reverse(numbers);
             // Example: NumberPrinter(numbers);
-            Array.Reverse(numbers);
-            NumberPrinter(numbers);
+           
         }
 
         private static int[] CopyArray(int[] numbers)
@@ -327,9 +310,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 3: Print both arrays to show they're identical
             // Example: int[] copy = new int[numbers.Length];
             // Example: Array.Copy(numbers, copy, numbers.Length);
-            int[] copy = new int[numbers.Length];
-            Array.Copy(numbers, copy, numbers.Length);
-            return copy; // Replace with your copied array
+            
+            return null; // Replace null with your copied array
         }
 
         private static void ClearArray(int[] numbers)
@@ -338,8 +320,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the array to show it's cleared
             // Example: Array.Clear(numbers, 0, numbers.Length);
             // Example: NumberPrinter(numbers);
-            Array.Clear(numbers, 0, numbers.Length);
-            NumberPrinter(numbers);            
+                     
         }
 
         private static int[] ResizeArray(int[] numbers)
@@ -351,14 +332,7 @@ namespace CollectionsMasterConsoleUI
             // Example: Random rng = new Random();
             // Example: for (int i = 10; i < numbers.Length; i++) numbers[i] = rng.Next(1, 101);
             // Example: NumberPrinter(numbers);
-            Array.Resize(ref numbers, 15);
-            Random rng = new Random();
-            for(int i = 10; i < numbers.Length; i++)
-            {
-                numbers[i] = rng.Next(1, 101);
-            }
-            NumberPrinter(numbers);
-            return numbers;
+           
         }
 
         // ============ LIST METHODS ============
@@ -369,9 +343,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Return the list
             // Example: List<int> myList = new List<int>();
             // Example: return myList;
-            List<int> myList = new List<int>();
-
-            return myList; // Replace this line
+            
+            return null; // Replace null with your list
         }
 
         private static void AddToList(List<int> numberList)
@@ -382,12 +355,7 @@ namespace CollectionsMasterConsoleUI
             // Example: numberList.Add(15);
             // Continue for all numbers...
             // Example: NumberPrinter(numberList);
-            numberList.Add(5);
-            numberList.Add(15);
-            numberList.Add(25);
-            numberList.Add(35);
-            numberList.Add(45);
-            NumberPrinter(numberList);
+          
             
         }
 
@@ -397,8 +365,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.Insert(2, 99);
             // Example: NumberPrinter(numberList);
-            numberList.Insert(2, 99);
-            NumberPrinter(numberList);
+            
             
         }
 
@@ -408,8 +375,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print a message saying if it was found or not
             // Example: bool found = numberList.Contains(25);
             // Example: Console.WriteLine($"Number 25 found: {found}");
-            bool found = numberList.Contains(25);
-            Console.WriteLine($"Number 25 found: {found}");
+            
         }
 
         private static void RemoveFromList(List<int> numberList)
@@ -418,8 +384,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.Remove(15);
             // Example: NumberPrinter(numberList);
-            numberList.Remove(15);
-            NumberPrinter(numberList);                       
+                               
         }
 
         private static void FindIndexInList(List<int> numberList)
@@ -428,8 +393,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the index (or -1 if not found)
             // Example: int index = numberList.IndexOf(25);
             // Example: Console.WriteLine($"Index of 25: {index}");
-            int index = numberList.IndexOf(25);
-            Console.WriteLine($"Index of 25: {index}");            
+                       
         }
 
         private static void RemoveAtIndexFromList(List<int> numberList)
@@ -438,8 +402,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.RemoveAt(1);
             // Example: NumberPrinter(numberList);
-            numberList.RemoveAt(1);
-            NumberPrinter(numberList);            
+                      
         }
 
         private static void SortList(List<int> numberList)
@@ -448,8 +411,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the sorted list using NumberPrinter(numberList)
             // Example: numberList.Sort();
             // Example: NumberPrinter(numberList);
-            numberList.Sort();
-            NumberPrinter(numberList);            
+                        
         }
 
         private static void ReverseList(List<int> numberList)
@@ -458,8 +420,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the reversed list using NumberPrinter(numberList)
             // Example: numberList.Reverse();
             // Example: NumberPrinter(numberList);
-            numberList.Reverse();
-            NumberPrinter(numberList);            
+                        
         }
 
         private static int[] ConvertListToArray(List<int> numberList)
@@ -469,12 +430,8 @@ namespace CollectionsMasterConsoleUI
             // Example: int[] array = numberList.ToArray();
             // Example: Console.WriteLine("List:"); NumberPrinter(numberList);
             // Example: Console.WriteLine("Array:"); NumberPrinter(array);
-            int[] array = numberList.ToArray();
-            Console.WriteLine("List:");
-            NumberPrinter(numberList);
-            Console.WriteLine("Array:");
-            NumberPrinter(array);
-            return array; // Replace with your array
+          
+            return null; // Replace null with your array
         }
 
         private static void ClearList(List<int> numberList)
@@ -483,8 +440,7 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the count to show it's empty
             // Example: numberList.Clear();
             // Example: Console.WriteLine($"List count after clear: {numberList.Count}");
-            numberList.Clear();
-            Console.WriteLine($"List count after clear: {numberList.Count}");
+            
         }
 
         // ============ DICTIONARY METHODS ============
@@ -494,10 +450,7 @@ namespace CollectionsMasterConsoleUI
             // TODO: Create a Dictionary with string keys and int values
             // Example: Dictionary<string, int> grades = new Dictionary<string, int>();
             // Then return grades;
-            Dictionary<string, int> grades = new Dictionary<string, int>();
-
-            
-            return grades;
+           
         }
 
         private static void AddToDictionary(Dictionary<string, int> grades)
@@ -506,16 +459,12 @@ namespace CollectionsMasterConsoleUI
             // Example: grades.Add("Alice", 95);
             
             grades["Charlie"] = 92; // Alternative syntax (this one is done for you)
-            grades.Add("Alice", 95);
-            grades.Add("Bob", 87);
+            
             
             Console.WriteLine("Student Grades:");
             // TODO: Print all key-value pairs using a foreach loop
             // Example: foreach (var student in grades)
-            foreach (var student in grades)
-            {
-                Console.WriteLine($"{student.Key}: {student.Value}");
-            }
+          
             
             
         }
@@ -525,10 +474,10 @@ namespace CollectionsMasterConsoleUI
             string studentName = "Alice";
             // TODO: Get Alice's grade from the dictionary
             // Example: int grade = grades[studentName];
-            int grade = grades[studentName];
+            
             // TODO: Print the result
             // Example: Console.WriteLine($"{studentName}'s grade: {grade}");
-            Console.WriteLine($"{studentName}'s grade: {grade}");
+           
         }
 
         private static void CheckDictionaryContainsKey(Dictionary<string, int> grades)
@@ -537,13 +486,7 @@ namespace CollectionsMasterConsoleUI
             
             // TODO: Check if the key exists using ContainsKey, then print appropriate message
             // Example: if (grades.ContainsKey(studentName))
-            if (grades.ContainsKey(studentName))
-            {
-                Console.WriteLine($"{studentName} is in the dictionary");                
-            } 
-            else {
-                Console.WriteLine($"{studentName} is not in the dictionary");
-            }
+          
             
         }
 
