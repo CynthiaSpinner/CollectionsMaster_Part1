@@ -366,6 +366,10 @@ namespace CollectionsMasterConsoleUI
             // STEP 3: Inside the loop, generate a random number between 1-100
             // STEP 4: Assign the random number to numbers[i]
             // Example: numbers[i] = rng.Next(1, 101);
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = rng.Next(1, 101);
+            }
             
         }
 
@@ -375,7 +379,9 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the middle element using numbers[numbers.Length / 2]
             // STEP 3: Print the last element using numbers[numbers.Length - 1]
             // Example: Console.WriteLine($"First: {numbers[0]}");
-            
+            Console.WriteLine($"First: {numbers[0]}");
+            Console.WriteLine($"Middle: {numbers[numbers.Length / 2]}");
+            Console.WriteLine($"Last: {numbers[numbers.Length - 1]}");
         }
 
         private static void SearchArray(int[] numbers)
@@ -385,7 +391,16 @@ namespace CollectionsMasterConsoleUI
             // STEP 3: Check if the result is -1 (not found) or >= 0 (found)
             // STEP 4: Print whether the number was found and at what index
             // Example: int index = Array.IndexOf(numbers, 50);
-            
+            int searchValue = 50;
+            int index = Array.IndexOf(numbers, searchValue);
+            if(index == -1)
+            {
+                Console.WriteLine($"Number {searchValue} not found");
+            }
+            else{}
+            {
+                Console.WriteLine($"Number {searchValue} found at index {index}");
+            }
         }
 
         private static void SortArray(int[] numbers)
@@ -394,7 +409,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the sorted array using NumberPrinter(numbers)
             // Example: Array.Sort(numbers);
             // Example: NumberPrinter(numbers);
-            
+            Array.Sort(numbers);
+            NumberPrinter(numbers);
         }
 
         private static void ReverseArray(int[] numbers)
@@ -403,7 +419,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the reversed array using NumberPrinter(numbers)
             // Example: Array.Reverse(numbers);
             // Example: NumberPrinter(numbers);
-            
+            Array.Reverse(numbers);
+            NumberPrinter(numbers);
         }
 
         private static int[] CopyArray(int[] numbers)
@@ -413,8 +430,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 3: Print both arrays to show they're identical
             // Example: int[] copy = new int[numbers.Length];
             // Example: Array.Copy(numbers, copy, numbers.Length);
-            
-            return null; // Replace with your copied array
+            int[] copy = new int[numbers.Length];
+            return copy; // Replace with your copied array
         }
 
         private static void ClearArray(int[] numbers)
@@ -423,7 +440,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the array to show it's cleared
             // Example: Array.Clear(numbers, 0, numbers.Length);
             // Example: NumberPrinter(numbers);
-            
+            Array.Clear(numbers, 0, numbers.Length);
+            NumberPrinter(numbers);            
         }
 
         private static int[] ResizeArray(int[] numbers)
@@ -435,7 +453,13 @@ namespace CollectionsMasterConsoleUI
             // Example: Random rng = new Random();
             // Example: for (int i = 10; i < numbers.Length; i++) numbers[i] = rng.Next(1, 101);
             // Example: NumberPrinter(numbers);
-            
+            Array.Resize(ref numbers, 15);
+            Random rng = new Random();
+            for(int i = 10; i < numbers.Length; i++)
+            {
+                numbers[i] = rng.Next(1, 101);
+            }
+            NumberPrinter(numbers);
             return numbers;
         }
 
@@ -447,8 +471,9 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Return the list
             // Example: List<int> myList = new List<int>();
             // Example: return myList;
-            
-            return null; // Replace this line
+            List<int> myList = new List<int>();
+
+            return myList; // Replace this line
         }
 
         private static void AddToList(List<int> numberList)
@@ -459,6 +484,12 @@ namespace CollectionsMasterConsoleUI
             // Example: numberList.Add(15);
             // Continue for all numbers...
             // Example: NumberPrinter(numberList);
+            numberList.Add(5);
+            numberList.Add(15);
+            numberList.Add(25);
+            numberList.Add(35);
+            numberList.Add(45);
+            NumberPrinter(numberList);
             
         }
 
@@ -468,6 +499,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.Insert(2, 99);
             // Example: NumberPrinter(numberList);
+            numberList.Insert(2, 99);
+            NumberPrinter(numberList);
             
         }
 
@@ -477,7 +510,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print a message saying if it was found or not
             // Example: bool found = numberList.Contains(25);
             // Example: Console.WriteLine($"Number 25 found: {found}");
-            
+            bool found = numberList.Contains(25);
+            Console.WriteLine($"Number 25 found: {found}")
         }
 
         private static void RemoveFromList(List<int> numberList)
@@ -486,7 +520,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.Remove(15);
             // Example: NumberPrinter(numberList);
-            
+            numberList.Remove(15)
+            NumberPrinter(numberList);                       
         }
 
         private static void FindIndexInList(List<int> numberList)
@@ -495,7 +530,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the index (or -1 if not found)
             // Example: int index = numberList.IndexOf(25);
             // Example: Console.WriteLine($"Index of 25: {index}");
-            
+            int index = numberList.IndexOf(25);
+            Console.WriteLine($"Index of 25: {index}");            
         }
 
         private static void RemoveAtIndexFromList(List<int> numberList)
@@ -504,7 +540,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the list using NumberPrinter(numberList)
             // Example: numberList.RemoveAt(1);
             // Example: NumberPrinter(numberList);
-            
+            numberList.RemoveAt(1);
+            NumberPrinter(numberList);            
         }
 
         private static void SortList(List<int> numberList)
@@ -513,7 +550,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the sorted list using NumberPrinter(numberList)
             // Example: numberList.Sort();
             // Example: NumberPrinter(numberList);
-            
+            numberList.Sort();
+            NumberPrinter(numberList);            
         }
 
         private static void ReverseList(List<int> numberList)
@@ -522,7 +560,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the reversed list using NumberPrinter(numberList)
             // Example: numberList.Reverse();
             // Example: NumberPrinter(numberList);
-            
+            numberList.Reverse();
+            NumberPrinter(numberList);            
         }
 
         private static int[] ConvertListToArray(List<int> numberList)
@@ -532,8 +571,12 @@ namespace CollectionsMasterConsoleUI
             // Example: int[] array = numberList.ToArray();
             // Example: Console.WriteLine("List:"); NumberPrinter(numberList);
             // Example: Console.WriteLine("Array:"); NumberPrinter(array);
-            
-            return null; // Replace with your array
+            int[] array = numberList.ToArray();
+            Console.WriteLine("List:");
+            NumberPrinter(numberList);
+            Console.WriteLine("Array:");
+            NumberPrinter(array);
+            return array; // Replace with your array
         }
 
         private static void ClearList(List<int> numberList)
@@ -542,7 +585,8 @@ namespace CollectionsMasterConsoleUI
             // STEP 2: Print the count to show it's empty
             // Example: numberList.Clear();
             // Example: Console.WriteLine($"List count after clear: {numberList.Count}");
-            
+            numberList.Clear();
+            Console.WriteLine($"List count after clear: {numberList.Count}");
         }
 
         // ============ DICTIONARY METHODS ============
