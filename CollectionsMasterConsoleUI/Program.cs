@@ -188,17 +188,7 @@ namespace CollectionsMasterConsoleUI
 
            
             #region Dictionary
-            // DICTIONARY<TKey,TValue> CORE METHODS FOR REFERENCE:
-            // • Add(key, value) - Add key-value pair
-            // • [key] = value - Set or get value by key
-            // • ContainsKey(key) - Check if key exists
-            // • ContainsValue(value) - Check if value exists
-            // • Remove(key) - Remove key-value pair
-            // • TryGetValue(key, out value) - Safely get value
-            // • Clear() - Remove all pairs
-            // • Keys - Get all keys
-            // • Values - Get all values
-            // • Count - Get number of pairs
+         
             
             Console.WriteLine("*** SECTION 3: DICTIONARY ***");
             Console.WriteLine("=".PadRight(60, '='));
