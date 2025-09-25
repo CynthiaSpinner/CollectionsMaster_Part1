@@ -1,22 +1,15 @@
 # Collections Master App - Student Exercise
 
 ## Overview
-This exercise helps you master C# collections through hands-on practice with Arrays, Lists, and 5 advanced collection types.
+This exercise helps you master C# collections through hands-on practice with Arrays, Lists, and Dictionaries.
 
 ## Structure
 
-### **Main Focus: Arrays & Lists**
-Practice core collection operations with the collections you already know:
+### **Main Focus: Arrays, Lists & Dictionaries**
+Practice core collection operations with essential C# collections:
 - **Arrays** (9 operations): Create, Populate, Access, Search, Sort, Reverse, Copy, Clear, Resize
 - **Lists** (11 operations): Create, Add, Insert, Contains, IndexOf, Remove, RemoveAt, Sort, Reverse, ToArray, Clear
-
-### **Learn More Section: Advanced Collections**
-Explore 5 new collection types with guided examples:
-- **Dictionary** - Key-value pairs for fast lookups
-- **HashSet** - Unique items only, no duplicates
-- **Stack** - Last-In-First-Out (LIFO) operations
-- **Queue** - First-In-First-Out (FIFO) operations
-- **SortedList** - Auto-sorted key-value pairs
+- **Dictionaries** (4 operations): Create, Add, Lookup, ContainsKey
 
 ## How to Complete This Exercise
 
@@ -54,16 +47,16 @@ private static int[] CreateArray()
 - Clear examples to guide implementation
 - Research prompts to learn core methods
 
-### **Advanced Collections (Guided Examples)**
-- Partial code with blanks to fill in
-- Working examples to learn from
-- "Fill in the blank" style learning
+### **Dictionaries (Key-Value Practice)**
+- Learn fast lookups with key-value pairs
+- Practice adding, retrieving, and checking keys
+- Understand when dictionaries are the right choice
 
 ## Key Learning Outcomes
 
 ### **Technical Skills:**
-- Master all core Array and List operations
-- Understand when to use different collection types
+- Master all core Array, List, and Dictionary operations
+- Understand when to use different collection types (indexed vs key-value)
 - Learn proper method organization and code structure
 - Practice input validation and error handling
 
@@ -75,11 +68,12 @@ private static int[] CreateArray()
 
 ## Tips for Success
 
-1. **Complete in Order**: Start with Arrays, then Lists, then explore advanced collections
+1. **Complete in Order**: Start with Arrays, then Lists, then Dictionaries
 2. **Test Frequently**: Run the program after each method implementation
 3. **Use NumberPrinter**: This helper method displays your collections clearly
 4. **Research Methods**: Use the core methods lists in the summary for reference
 5. **Don't Rush**: Take time to understand each collection's unique characteristics
+6. **Dictionary Focus**: Pay attention to how key-value pairs differ from indexed collections
 
 ## Getting Help
 
