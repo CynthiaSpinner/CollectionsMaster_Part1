@@ -188,8 +188,7 @@ namespace CollectionsMasterConsoleUI
 
            
             #region Dictionary
-         
-            
+                       
             Console.WriteLine("*** SECTION 3: DICTIONARY ***");
             Console.WriteLine("=".PadRight(60, '='));
             //Key-value pairs for fast lookups (like a phone book)
