@@ -443,8 +443,7 @@ namespace CollectionsMasterConsoleUI
              
             
             Console.WriteLine("Student Grades:");
-            // TODO: Print all key-value pairs using a foreach loop
-            // Example: foreach (var student in grades)
+            // TODO: Call DictionaryPrinter() here and add the Dictionary as the argument
            
             
             
