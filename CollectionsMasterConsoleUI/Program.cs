@@ -27,7 +27,7 @@ namespace CollectionsMasterConsoleUI
         static void Main(string[] args)
         {
             Console.WriteLine("*** COLLECTIONS MASTER APP ***");
-            //Master Arrays & Lists, then explore advanced collections!
+            //Master Arrays & Lists, then explore dictionary!
             //IMPORTANT: Implement logic in the method stubs at the bottom of this file!
            
             Console.WriteLine();
