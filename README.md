@@ -13,31 +13,36 @@ Practice core collection operations with essential C# collections:
 
 ## How to Complete This Exercise
 
-### **Step 1: Implement Method Calls**
-In the Main method, you'll see TODOs like:
-```csharp
-Console.WriteLine("\n1. ARRAY CREATE:");
-// TODO 1: Call CreateArray() method and store result in a variable
-// Implement the CreateArray() method at bottom of file
-```
-
-### **Step 2: Implement Method Logic**
-Scroll to the bottom of the file and implement the method:
+### **Step 1: Implement Method Logic**
+Scroll down to the METHOD STUBS section and implement each method:
 ```csharp
 private static int[] CreateArray()
 {
-    // STEP 1: Create an integer array of size 10
-    // STEP 2: Return the array
+    // TODO: Create an integer array of size 10
+    // TODO: Console.WriteLine() to print a message that the array was created
+    // TODO: Return the array
     // Example: int[] myArray = new int[10];
+    // Example: Console.WriteLine("Array Created!");
     // Example: return myArray;
     
-    return null; // Replace this line
+    return null; // Replace this null with your array
 }
+```
+
+### **Step 2: Call Your Methods**
+Go back to the Main method and uncomment the TODO lines:
+```csharp
+Console.WriteLine("\n1. ARRAY CREATE:");
+// TODO: Call CreateArray() method and store result in a variable
+// Implement the CreateArray() method at bottom of file
+int[] numbers = CreateArray();  // <-- Uncomment and add this line
 ```
 
 ### **Step 3: Test Your Work**
 - Run the program after implementing each method
-- Use the provided `NumberPrinter()` method to display results
+- Use the provided helper methods to display results:
+  - `NumberPrinter()` for arrays and lists
+  - `DictionaryPrinter()` for dictionaries
 - Each operation has clear console labels to show progress
 
 ## Learning Approach
