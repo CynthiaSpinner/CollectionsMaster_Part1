@@ -504,8 +504,7 @@ namespace CollectionsMasterConsoleUI
             grades.Add("Bob", 87);
             
             Console.WriteLine("Student Grades:");
-            // TODO: Print all key-value pairs using a foreach loop
-            // Example: foreach (var student in grades)
+            // TODO: Call DictionaryPrinter here and add the dictionary as the argument
             
             DictionaryPrinter(grades);
         }
