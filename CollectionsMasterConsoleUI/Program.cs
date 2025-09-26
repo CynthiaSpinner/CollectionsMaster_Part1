@@ -507,10 +507,7 @@ namespace CollectionsMasterConsoleUI
             // TODO: Print all key-value pairs using a foreach loop
             // Example: foreach (var student in grades)
             
-            foreach (var student in grades)
-            {
-                Console.WriteLine($"{student.Key}: {student.Value}");
-            }
+            DictionaryPrinter(grades);
         }
 
         private static void LookupInDictionary(Dictionary<string, int> grades)
